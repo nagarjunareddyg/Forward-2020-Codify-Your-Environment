@@ -3,7 +3,7 @@ name: Run Ansible Playbooks
 on:
   push:
     branches:
-      - master
+    - master
 
 jobs:
   run-playbooks:
