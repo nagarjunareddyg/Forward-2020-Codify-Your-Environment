@@ -13,7 +13,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+    - name: Change to Ansible directory and clone Ansible Repo
+      run: ansible-playbook /home/ansadmin/clone.yml
     - name: Change to Ansible directory and clone Ansible Repo
       run: cd ansible && git clone https://github.com/rubrikinc/rubrik-modules-for-ansible.git
     - name: Stage Ansible files
